@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:maxLength="24"
+        android:text="Fiery Chicken Chettinad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="+"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/tv_item_quantity"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_quantity" />
+
+    <TextView
+        android:id="@+id/tv_item_quantity"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_minus"
+        app:layout_constraintEnd_toStartOf="@+id/tv_minus"
+        app:layout_constraintTop_toBottomOf="@+id/tv_minus" />
+
+    <TextView
+        android:id="@+id/tv_minus"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="72dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="-"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_item_price"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_item_price" />
+
+    <TextView
+        android:id="@+id/tv_cart_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="\u20B9 288.00"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_minus"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+</android.support.constraint.ConstraintLayout>

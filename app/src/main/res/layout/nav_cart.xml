@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image_cart_restaurant"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_cart_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Flavors Of TMH - Taj Mahal Hotel"
+        app:layout_constraintStart_toEndOf="@+id/image_cart_restaurant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cart_restaurant_locality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        tools:text="Banjara Hills"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_restaurant_name" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_cart_items_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/image_cart_restaurant" />
+
+    <include
+        android:id="@+id/layout_billing"
+        layout="@layout/billing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_cart_items_list"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

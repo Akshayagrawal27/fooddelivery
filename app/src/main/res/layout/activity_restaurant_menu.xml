@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.akshay.fooddelivery.ui.MenuItem.RestaurantMenuActivity">
+
+    <ImageView
+        android:id="@+id/image_item_restaurant"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_item_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Flavors Of TMH - Taj Mahal Hotel"
+        app:layout_constraintStart_toEndOf="@+id/image_item_restaurant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_restaurant_locality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Banjara Hills"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_restaurant_name" />
+
+    <View
+        android:id="@+id/view_item"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/image_item_restaurant"
+        android:background="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/image_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_item"
+        app:srcCompat="@drawable/ic_star_rate_black_18dp" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="4.3"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/image_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star"
+        app:layout_constraintTop_toBottomOf="@+id/image_star" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_delivery_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="40dp"
+        android:text="34 min"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restaurant_rating"
+        app:layout_constraintEnd_toStartOf="@+id/tv_restaurant_price"
+        app:layout_constraintStart_toEndOf="@+id/tv_restaurant_rating"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_rating" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="\u20B9 250 For Two"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restaurant_delivery_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_delivery_time" />
+
+    <View
+        android:id="@+id/view_item1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_rating"
+        android:background="@color/colorPrimary"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_menu_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/view_item1"/>
+
+    <LinearLayout
+        android:id="@+id/layout_view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorAccent"
+        android:elevation="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_menu_number_of_items"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            tools:text="2 Items" />
+
+        <TextView
+            android:id="@+id/tv_menu_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:layout_marginTop="12dp"
+            tools:text=" 320"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            android:gravity="end"
+            android:text="View Cart" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

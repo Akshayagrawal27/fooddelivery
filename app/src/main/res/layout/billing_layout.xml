@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_cart_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Any Instructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_cart_items_list" />
+
+    <TextView
+        android:id="@+id/tv_restaurant_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Restaurant Bill"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cart_instruction" />
+
+    <TextView
+        android:id="@+id/tv_cart_item_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Value"
+        app:layout_constraintStart_toStartOf="@+id/tv_restaurant_bill"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_bill" />
+
+    <TextView
+        android:id="@+id/tv_cart_packaging_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Packaging Charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_item_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_item_value" />
+
+    <TextView
+        android:id="@+id/tv_cart_gst_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="GST Charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_packaging_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_packaging_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_delivery_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Delivery Charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_gst_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_gst_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_to_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="To Pay"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_delivery_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_delivery_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_total_item_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        tools:text="\u20B9 288.00"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_item_value"
+        app:layout_constraintLeft_toRightOf="@+id/tv_cart_item_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_item_value" />
+
+    <TextView
+        android:id="@+id/tv_cart_total_packaging_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\u20B9 15.00"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_packaging_charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_total_item_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_packaging_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_total_gst_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\u20B9 15.66"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_gst_charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_total_packaging_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_gst_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_total_delivery_charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\u20B9 30.00"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_delivery_charges"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_total_gst_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_delivery_charges" />
+
+    <TextView
+        android:id="@+id/tv_cart_total_to_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\u20B9 349.00"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cart_to_pay"
+        app:layout_constraintStart_toStartOf="@+id/tv_cart_total_delivery_charges"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_to_pay" />
+
+    <Button
+        android:id="@+id/bt_confirm_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Confirm"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cart_to_pay" />
+</android.support.constraint.ConstraintLayout>

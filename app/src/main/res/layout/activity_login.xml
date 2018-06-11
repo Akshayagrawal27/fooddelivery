@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_image"
+    tools:context="com.akshay.fooddelivery.ui.login.LoginActivity">
+
+    <Button
+        android:id="@+id/signin_with_phonenumber"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:background="@color/login_buttons"
+        android:text="@string/signin_with_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:alpha="0.7"
+        android:onClick="setNumberLayoutVisible"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/signin_with_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/login_buttons"
+        android:text="@string/signin_with_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_with_phonenumber"
+        android:alpha="0.7"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/signin_with_google"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/login_buttons"
+        android:text="@string/signin_with_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_with_email"
+        android:alpha="0.7"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/layout_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_number"
+            android:textColor="@color/login_buttons"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Enter Phone Number"
+            android:textColor="@color/login_buttons"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+        <Button
+            android:id="@+id/bt_signin_with_phonenumber"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:background="@color/login_buttons"
+            android:text="@string/button_getotp"
+            android:layout_gravity="center_vertical"
+            android:onClick="signInWithPhoneNumber"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_otp"
+            android:textColor="@color/login_buttons"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_getOtp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:textColor="@color/login_buttons"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/bt_verifyOtp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.7"
+            android:background="@color/login_buttons"
+            android:text="@string/button_verify"
+            android:onClick="verifyOtp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_otp"
+            android:textColor="@color/login_buttons"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:onClick="resendOtp"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

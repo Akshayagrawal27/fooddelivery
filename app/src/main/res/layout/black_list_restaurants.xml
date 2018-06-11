@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/image_restaurant"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Rekha Restaurant"
+        android:textColor="@color/shimmer"
+        app:layout_constraintStart_toEndOf="@+id/image_restaurant"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_cuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="North Indian, Continental"
+        android:textSize="10sp"
+        android:textColor="@color/shimmer"
+        android:background="@color/shimmer"
+        app:layout_constraintStart_toStartOf="@+id/tv_restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_name" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="241dp"
+        android:layout_height="1dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmer"
+        android:textColor="@color/shimmer"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_restaurant_cuisine"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_cuisine" />
+
+    <ImageView
+        android:id="@+id/image_star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/image_restaurant"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_cuisine"
+        android:background="@color/shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="4.3"
+        android:textSize="12sp"
+        android:textColor="@color/shimmer"
+        app:layout_constraintBottom_toTopOf="@+id/image_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star"
+        app:layout_constraintTop_toBottomOf="@+id/image_star"
+        android:background="@color/shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_delivery_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="34 min"
+        android:textColor="@color/shimmer"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restaurant_rating"
+        app:layout_constraintStart_toEndOf="@+id/tv_restaurant_rating"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_rating"
+        android:background="@color/shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_restaurant_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="\u20B9 250 For Two"
+        android:textSize="12sp"
+        android:textColor="@color/shimmer"
+        app:layout_constraintBottom_toTopOf="@+id/tv_restaurant_delivery_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_restaurant_delivery_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_delivery_time"
+        android:background="@color/shimmer"/>
+
+</android.support.constraint.ConstraintLayout>
